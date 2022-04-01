@@ -1,4 +1,8 @@
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,8 +18,8 @@ public class Principal {
 
 	public static void main(String[] args) {
 		
-		testeCliente();
-		testeProduto();
+//		testeCliente();
+//		testeProduto();
 		testeVenda();
 		
 	}
@@ -86,7 +90,7 @@ public class Principal {
 		i1.setProduto(p1);
 		i1.setQtde(2);
 		i1.calcularValorTotal();
-		
+				
 		ItemVenda i2 = new ItemVenda();
 		i2.setProduto(p2);
 		i2.setQtde(1);
@@ -95,6 +99,10 @@ public class Principal {
 		List<ItemVenda> items = new ArrayList<>();
 		items.add(i1);
 		items.add(i2);
+		
+		for (ItemVenda item : items) {
+			System.out.println(item.getQtde() + " - " + item.getProduto() + " - TOTAL: " + item.getValorTotal());
+		}
 		
 		Cliente c1 = new Cliente();
 		c1.setId(1);
@@ -113,7 +121,6 @@ public class Principal {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-		
 	}
 	
 }

@@ -32,6 +32,6 @@ public class Produto {
 	}
 	
 	public String toString(){
-		return descricao;
+		return descricao + " R$ " + precoUnitario;
 	}
 }

@@ -18,7 +18,7 @@ public class ClienteDao {
 	private Connection con = ConnectionUtil.getConnection();
 	
 	/*
-	 * Singleton
+	 * Singleton - Design Pattern
 	 */
 	public static ClienteDao getInstance() {
 		if (instance == null) {
