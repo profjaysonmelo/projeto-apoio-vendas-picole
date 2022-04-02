@@ -81,7 +81,16 @@ public class PrincipalUI extends JFrame {
 		jbPrincipal.add(jmVendas);
 		
 		JMenuItem jmiRegistrarVendas = new JMenuItem("Registrar Vendas");
+		jmiRegistrarVendas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				RegistroVendaUI regVendaUI = new RegistroVendaUI();
+				regVendaUI.setVisible(true);
+				contentPane.add(regVendaUI, 0);
+			}
+		});
 		jmVendas.add(jmiRegistrarVendas);
+		
+		
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
